@@ -1,38 +1,384 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: "Arial";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #191d28;
+  color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.background-active {
+  background-color: #191d28;
+  .heading-content {
+    color: #ffffff;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.background-inactive {
+  background-color: #ffffff;
+  color: black;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: 250px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-elements {
+  background-color: #404350;
+  padding: 5px;
+  border-radius: 5px;
+  color: #ffffff;
+  height: 40px;
+  width: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.buy-btc {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.timer-container-card {
+  background-color: transparent;
+  border: 3px solid #3cc5c2;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.timer {
+  color: #3cc5c2;
+  font-weight: bold;
+}
+
+.telegram-button {
+  background-color: #3cc5c2;
+  color: #ffffff;
+  height: 40px;
+  padding: 2px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.telegram-icon {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.body-heading {
+  font-size: 24px;
+  font-weight: 500;
+  color: grey;
+  text-align: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.content-heading {
+  font-size: 30px;
+  color: #3cc5c2;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content-para {
+  color: grey;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+
+.heading-content {
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Responsive Table */
+.company-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px 10px;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.company-table th,
+.company-table td {
+  padding: 12px 15px;
+  text-align: left;
+  word-wrap: break-word; /* For long text in small screens */
+}
+
+.company-table th {
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.company-table td {
+  font-size: 0.9em;
+  color: #ffffff;
+  background-color: #404350;
+  border: none;
+}
+
+.company-table tr {
+  border-bottom: 10px solid transparent;
+}
+
+.company-table tr:first-child td:first-child {
+  border-top-left-radius: 8px;
+}
+
+.company-table tr:first-child td:last-child {
+  border-top-right-radius: 8px;
+}
+
+.company-table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.company-table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  background-color: transparent;
+  padding: 5px;
+  font-size: 14px;
+  color: #7b7c84;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #7b7c84;
+  border-bottom: 1px solid #d2d3da;
+  margin-bottom: 45px;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.add-home-screen-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #191d28;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-radius: 0 0 8px 8px;
+}
+
+.button-screen {
+  background-color: transparent;
+  border: 1px solid #3cc5c2;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: #3cc5c2;
+  margin: 10px 0;
+}
+
+.button-screen:hover {
+  background-color: #3cc5c2;
+  color: #ffffff;
+}
+
+/* Responsive Adjustments */
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logo {
+    height: 40px;
+    width: 200px;
+  }
+
+  .select-elements {
+    height: 35px;
+    width: fit-content;
+    font-size: 12px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timer-container {
+    margin-top: 20px;
+  }
+
+  .content-container {
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .content {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .content-heading {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .content-para {
+    font-size: 10px;
+  }
+
+  .heading-content {
+    font-size: 30px;
+  }
+
+  /* Table Responsive */
+  .company-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-spacing: 0;
+  }
+
+  .company-table thead,
+  .company-table tbody,
+  .company-table th,
+  .company-table td,
+  .company-table tr {
+    display: block;
+  }
+
+  .company-table tr {
+    margin-bottom: 15px;
+  }
+
+  .company-table td {
+    padding: 10px;
+    font-size: 12px;
+    text-align: right;
+    position: relative;
+    border: 1px solid #404350;
+  }
+
+  .company-table th {
+    background-color: transparent;
+    font-weight: bold;
+    display: none;
+  }
+
+  .company-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+/* Large devices (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .app-container {
+    padding: 50px;
+  }
+
+  .heading-content {
+    font-size: 60px;
+  }
+
+  .content-heading {
+    font-size: 36px;
+  }
+
+  .content-para {
+    font-size: 14px;
+  }
+
+  .button-screen {
+    font-size: 20px;
   }
 }
