@@ -65,7 +65,7 @@ class Hodlinfo extends Component {
 
   getCompaniesList = async () => {
     try {
-      const response = await fetch("/api/tickers");
+      const response = await fetch("https://hodlinfo-backend-nu.vercel.app/api/tickers");
       const data = await response.json();
       const tickers = Object.values(data)
         .slice(0, 10)
